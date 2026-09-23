@@ -1,0 +1,19 @@
+<p>gula works!</p>
+
+<form [formGroup]="gulaForm" (ngSubmit)="startCalc()" class="form-control">
+    <div>
+        <label for="height" class="form-label ms-2">Magasság</label>
+        <input type="text" id="height" formControlName="height" class="form-control">
+    </div>
+    <div >
+        <label for="baseSide" class="form-label ms-2">Alap oldal</label>
+        <input type="text" id="baseSide" formControlName="baseSide" class="form-control">
+    </div>
+    <button class="btn btn-primary m-3">Számít</button>
+    @if(showVolume){
+        <div >
+            <label for="volume" class="form-label ms-2">Térfogat</label>
+            <input type="text" formControlName="volume" id="volume" class="form-control" readonly>
+        </div>
+    }
+</form>
